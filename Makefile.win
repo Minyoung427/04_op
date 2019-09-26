@@ -4,12 +4,12 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = "main\ c.o"
+LINKOBJ  = "main c.o"
 LIBS     = -static-libgcc
 INCS     = 
 CXXINCS  = 
-BIN      = Project2.exe
+BIN      = Project3.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
+"main\ c.o": main\ c.c
+	$(CC) -c "main c.c" -o "main c.o" $(CFLAGS)
